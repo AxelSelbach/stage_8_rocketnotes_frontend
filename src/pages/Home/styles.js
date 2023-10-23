@@ -17,26 +17,34 @@ export const Container = styled.div`
 
 export const Brand = styled.div`
   grid-area: brand;
-  background: purple;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  border-bottom: 1px solid ${({ theme }) => theme.COLORS.BACKGROUND_700};
+  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+  > h1 {
+    font-size: 24px;
+    color: ${({ theme }) => theme.COLORS.ORANGE};
+  }
 `
 
 export const Menu = styled.ul`
   grid-area: menu;
-  background: violet;
+
 `
 
 export const Search = styled.div`
   grid-area: search;
-  background: blue;
+
 `
 
 export const Content = styled.div`
   grid-area: content;
-  background: blueviolet;
+
 `
 
 export const NewNote = styled.button`
   grid-area: newnote;
-  background: pink;
+
 `
