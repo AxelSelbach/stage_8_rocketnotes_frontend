@@ -1,8 +1,8 @@
-import { Container, Form, Background } from "./styles";
-import { Input } from '../../components/Input';
 import { Button } from '../../components/Button';
+import { Input } from '../../components/Input';
+import { Background, Container, Form } from './styles';
 
-import { FiMail, FiLock, FiUser } from 'react-icons/fi'
+import { FiLock, FiMail, FiUser } from 'react-icons/fi';
 
 export function SignUp() {
   return ( 
