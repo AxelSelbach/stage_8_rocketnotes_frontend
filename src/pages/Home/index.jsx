@@ -1,13 +1,13 @@
-import { useState, useEffect } from 'react';
-import { Note } from '../../components/Note';
-import { Input } from '../../components/Input';
-import { useNavigate } from 'react-router-dom';
-import { Header } from '../../components/Header';
+import { useEffect, useState } from 'react';
 import { FiPlus, FiSearch } from 'react-icons/fi';
-import { Section } from '../../components/Section';
+import { useNavigate } from 'react-router-dom';
 import { ButtonText } from '../../components/ButtonText';
-import { Container, Brand, Menu, Search, Content, NewNote } from './styles'
+import { Header } from '../../components/Header';
+import { Input } from '../../components/Input';
+import { Note } from '../../components/Note';
+import { Section } from '../../components/Section';
 import { api } from '../../services/api';
+import { Brand, Container, Content, Menu, NewNote, Search } from './styles';
 
 export function Home() {
   const [search, setSearch] = useState("")
@@ -73,7 +73,7 @@ export function Home() {
           <ButtonText
             title="Todos"
             onClick={() => handleTagSelected("all")}
-            $isactive={tagsSelected.length === 0}
+            isActive={tagsSelected.length === 0}
           />
         </li>
         {
@@ -82,7 +82,7 @@ export function Home() {
               <ButtonText
                 title={tag.name}
                 onClick={() => handleTagSelected(tag.name)}
-                $isactive={tagsSelected.includes(tag.name)}
+                isActive={tagsSelected.includes(tag.name)}
               />
             </li>
           ))
